@@ -1,0 +1,9 @@
+int pino=2;
+void setup () {
+pinMode ( pino, OUTPUT);
+
+}
+
+void loop() {
+digitalWrite(pino, HIGH);
+}
