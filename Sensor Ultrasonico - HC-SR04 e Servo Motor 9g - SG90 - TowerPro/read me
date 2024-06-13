@@ -1,0 +1,1 @@
+Para o teste, foram utilizados dois componentes simultâneos, onde realizavam o trabalho de uma cancela automática. Sem nenhum objeto por perto, o servo fica em 2repouso e o LED fica na cor verde. Quando um objeto se aproxima do sensor ultrassônico, o servo gira e o LED acende com luz vermelha.
