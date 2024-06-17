@@ -1,0 +1,36 @@
+const int UMIDADE_PINO = A0;
+const int LED_PINO_BAIXO = 12;
+const int LED_PINO_ALTO = 13;
+
+const int LIMIAR_BAIXO = 400;
+const int LIMIAR_ALTO = 600;
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(LED_PINO_BAIXO, OUTPUT);
+    pinMode(LED_PINO_ALTO, OUTPUT);
+  }
+
+void loop() {
+  int valorSensor = analogRead(UMIDADE_PINO);
+  Serial.print("Valor do sensor de umidade: ");
+  Serial.println(valorSensor);
+
+  if (valorSensor < LIMIAR_BAIXO) {
+    digitalWrite(LED_PINO_BAIXO, HIGH);
+    digitalWrite(LED_PINO_ALTO, LOW);
+    Serial.println("Umidade baixa!");
+  }
+  else if (valorSensor > LIMIAR_ALTO) {
+    digitalWrite(LED_PINO_BAIXO, LOW);
+    digitalWrite(LED_PINO_ALTO, HIGH);
+    Serial.println("Umidade alta!");
+  }
+   else {
+    digitalWrite(LED_PINO_BAIXO, LOW);
+    digitalWrite(LED_PINO_ALTO, LOW);
+    Serial.println("Umidade ideal!");
+  }
+
+  delay(1000);
+}
