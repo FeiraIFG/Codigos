@@ -1,0 +1,25 @@
+#include <Servo.h>
+
+const int ldrPin = A0;
+const int servoPin = 9;
+
+int ldrValue = 0;
+Servo servo;
+
+void setup() {
+  servo.attach(servoPin);
+  Serial.begin(9600);
+}
+
+void loop() {
+  ldrValue = analogRead(ldrPin);
+  int servoPosition = map(ldrValue, 0, 1023, 0, 180);
+  servo.write(servoPosition);
+
+  Serial.print("LDR Value: ");
+  Serial.print(ldrValue);
+  Serial.print("Servo Position: ");
+  Serial.print(servoPosition);
+
+  delay(100)
+}
