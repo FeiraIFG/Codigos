@@ -22,10 +22,12 @@ pinMode(10, OUTPUT);
 pinMode(11, OUTPUT);
 }
 
-void loop()
-{
-	if (0.01723 * readUltrasonicDistance (7, 8) < 50 ) {
-		servo_5.wirte(90);
-		digitalWrite(10, LOW);
-		digitalWrite(11, HIGH);
+	void loop()
+	{
+		if (0.01723 * readUltrasonicDistance (7, 8) < 50 ) {
+			servo_5.wirte(90);
+			digitalWrite(10, LOW);
+			digitalWrite(11, HIGH);
+	}
+	delay(10);
 } 
