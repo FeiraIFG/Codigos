@@ -1,0 +1,35 @@
+int pos = 0;
+
+void setup()
+{
+	pinMode(8, OUTPUT);
+	pinMode(7, OUTPUT);
+	pinMode(6, OUTPUT);
+}
+
+void loop()
+{
+	tone(8, 493.88, 100);
+	delay(400);
+	tone(7, 659.66, 400);
+	delay(500);
+	tone(6, 783.99, 200);
+	delay(240);
+
+	tone(8, 739.99, 230);
+	delay(400);
+	tone(7, 659.66, 400);
+	delay(500);
+	tone(6, 987.77, 200);
+	delay(400);
+
+	tone(8, 880, 550);
+	delay(800);
+	tone(7, 739.99, 500);
+	delay(850);
+	tone(6, 659.66, 400);
+	delay(500);
+
+	tone(8, 783.99, 200);
+	delay(500);
+}
