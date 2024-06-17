@@ -1,0 +1,23 @@
+const int SENSOR_PINO = A0;
+const int LED_PINO = 13;
+
+const int LIMIAR_SENSOR = 500;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED_PINO, OUTPUT);
+}
+
+void loop() {
+  int valorSensor = analogRed(SENSOR_PINO);
+  Serial.print("Valor do sensor: ");
+  Serial.println(valorSensor);
+
+  if (valorSensor > LIMIAR_SENSOR) {
+    digitalWrite(LED_PINO, HIGH);
+    Serial.println("Faixa detectada!");
+    } else {
+    digitalWrite(LED_PINO, LOW);
+    Serial.println("Nenhuma faixa detecatada."):
+    }
+}
