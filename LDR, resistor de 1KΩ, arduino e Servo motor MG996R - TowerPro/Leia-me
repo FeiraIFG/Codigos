@@ -1,0 +1,1 @@
+Para verificar o funcionamento destes componentes,foi utilizado um mesmo circuito substituindo apenas as peças (LDR e Servo Motor). Sem nenhuma luz no LDR, o servo fica em repouso e assim que recebe uma luminosidade o servo gira.
